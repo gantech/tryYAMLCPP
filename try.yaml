@@ -1,0 +1,35 @@
+tryV: [2.0,0.0,0.0]
+nTurbinesGlob: 1
+dryRun:  False
+restart: False
+tStart:  0.0
+tEnd:    60.0
+tMax:    60.0
+ntStart: 0
+ntEnd:   9600
+dtFAST:  0.00625
+nEveryCheckPoint: 1600
+
+
+TurbineData:
+
+   Turbine0:
+      procNo: 0
+      TurbinePos: [ 0.0, 0.0, 0.0 ]
+      numScOutputs: 0
+      numScInputs: 0
+      restartFileName: "banana"
+      FASTInputFileName: "Test01.fst"
+      TurbID:  1
+
+   Turbine1:
+      procNo: 1
+      TurbinePos: [ 10.0, 20.0, -30.0 ]
+      numScOutputs: 1
+      numScInputs: 4
+      restartFileName: "banana"
+      FASTInputFileName: "Test02.fst"
+      TurbID:  2
+
+
+

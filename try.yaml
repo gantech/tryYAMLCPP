@@ -31,5 +31,23 @@ TurbineData:
       FASTInputFileName: "Test02.fst"
       TurbID:  2
 
+SeqStyleTurbineData:
+
+  -   procNo: 0
+      TurbinePos: [ 0.0, 0.0, 0.0 ]
+      numScOutputs: 0
+      numScInputs: 0
+      restartFileName: "banana"
+      FASTInputFileName: "Test01.fst"
+      TurbID:  1
+
+  -   procNo: 1
+      TurbinePos: [ 10.0, 20.0, -30.0 ]
+      numScOutputs: 1
+      numScInputs: 4
+      restartFileName: "banana"
+      FASTInputFileName: "Test02.fst"
+      TurbID:  2
+
 
 

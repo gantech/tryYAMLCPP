@@ -80,6 +80,8 @@ expect_map(const YAML::Node& node, const std::string& key, bool optional=false);
 
 void loadTurbines(YAML::Node & node) ;
 
+void loadSeqStyleTurbines(YAML::Node & node) ;
+
 }
 
 namespace YAML {

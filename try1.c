@@ -87,12 +87,40 @@ namespace blah {
       for (YAML::const_iterator ispec = y_specs.begin(); ispec != y_specs.end(); ++ispec) {
       	std::cout << "Working on " << ispec->first.as<std::string>() << std::endl ;
       	YAML::Node ti = ispec->second ;
-      	Turbine t =  ti.as<Turbine>() ;
+	Turbine & t = * new Turbine() ;
+	t =  ti.as<Turbine>() ;
       	t.printData();
       }
 
     }
+  }
+
+
+  void loadSeqStyleTurbines(YAML::Node & node) {
+
+    const YAML::Node y_specs = expect_sequence(node, "SeqStyleTurbineData", false);
+    if (y_specs) {
+      const int nTurbines = y_specs.size() ;
+      std::cout << "nTurbines = " << nTurbines << std::endl ;
+
+      for (size_t ispec = 0; ispec < y_specs.size(); ++ispec) {
+      	YAML::Node ti = y_specs[ispec] ;
+	Turbine & t = * new Turbine() ;
+      	t =  ti.as<Turbine>() ;
+      	t.printData();
+      }
+
+      /* Doesn't work
+      /* for (YAML::const_iterator ispec = y_specs.begin(); ispec != y_specs.end(); ++ispec) { */
+      /* 	std::cout << "Working on " << ispec->first.as<std::string>() << std::endl ; */
+      /* 	YAML::Node ti = ispec->second ; */
+      /* 	Turbine & t = * new Turbine() ; */
+      /* 	t =  ti.as<Turbine>() ; */
+      /* 	t.printData(); */
+      /* } */
+
+    }
     
-  }  
+  }
 
 } //namespace blah

@@ -10,6 +10,7 @@ int main() {
   std::cout << v.ux_ << " " << v.uy_ << " " << v.uz_ << std::endl ;
 
   blah::loadTurbines(config);
+  blah::loadSeqStyleTurbines(config);
 
 
   return 0;
